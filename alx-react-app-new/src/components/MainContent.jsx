@@ -10,9 +10,13 @@ const MainContent = () => {
         textAlign: "center",
       }}
     >
-      <h2 style={{ color: "navy", marginBottom: "10px" }}>Welcome to My City List</h2>
+      <h2 style={{ color: "navy", marginBottom: "10px" }}>
+        Welcome to My City List
+      </h2>
+
+      {/* 🔥 REQUIRED exact text */}
       <p style={{ fontSize: "18px", color: "#333" }}>
-        Here are some of the cities I’d love to visit someday.
+        I love to visit New York, Paris, and Tokyo.
       </p>
     </main>
   );
