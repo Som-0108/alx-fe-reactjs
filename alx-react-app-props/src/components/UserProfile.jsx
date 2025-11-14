@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import UserContext from "../UserContext"; // adjust path if needed
 
-const UserProfile = (props) => {
+const UserProfile = () => {
+  const userData = useContext(UserContext); // get data from context
+
   return (
     <div
       style={{
@@ -9,11 +12,11 @@ const UserProfile = (props) => {
         margin: "10px",
       }}
     >
-      <h2 style={{ color: "blue" }}>{props.name}</h2>
+      <h2 style={{ color: "blue" }}>{userData.name}</h2>
       <p>
-        Age: <span style={{ fontWeight: "bold" }}>{props.age}</span>
+        Age: <span style={{ fontWeight: "bold" }}>{userData.age}</span>
       </p>
-      <p>Bio: {props.bio}</p>
+      <p>Bio: {userData.bio}</p>
     </div>
   );
 };
