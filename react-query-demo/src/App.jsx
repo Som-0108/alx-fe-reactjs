@@ -1,14 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App.jsx';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import React from "react";
+import { QueryClient, QueryClientProvider } from "react-query";
+import PostsComponent from "./components/PostsComponent";
 
 const queryClient = new QueryClient();
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+function App() {
+  return (
     <QueryClientProvider client={queryClient}>
-      <App />
+      <PostsComponent />
     </QueryClientProvider>
-  </React.StrictMode>
-);
+  );
+}
+
+export default App;
